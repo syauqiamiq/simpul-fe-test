@@ -14,7 +14,7 @@ const ChatCard = ({ data }: IChatCardProps) => {
     <>
       {data.chatDetail.map((v: IChatDetail, i: any) => {
         return v.chatType === "FROM" ? (
-          <div className="flex">
+          <div className="flex" key={i}>
             <div className="max-w-[85%]">
               <div className="flex w-full font-lato font-semibold text-xs mt-2 text-quicks-chat-label-1">
                 {v.senderName}
@@ -43,7 +43,7 @@ const ChatCard = ({ data }: IChatCardProps) => {
             </div>
           </div>
         ) : (
-          <div className="flex justify-end">
+          <div className="flex justify-end" key={i}>
             <div className="max-w-[85%]">
               <div className="flex w-full justify-end font-lato font-semibold text-xs mt-2 text-quicks-chat-label-2">
                 You

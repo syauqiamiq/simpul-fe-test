@@ -1,14 +1,11 @@
-import { useAppSelector } from "@/libs/hooks/useAppSelector";
-import FloatingQuicksButton from "./FloatingQuicksButton";
+import { QuicksButtonConditionType } from "@/interfaces/quicks-button-type";
 import { useAppDispatch } from "@/libs/hooks/useAppDispatch";
+import { useAppSelector } from "@/libs/hooks/useAppSelector";
 import { setSelectedButtonType } from "@/store/slices/quicks-button-slice";
-import {
-  QuicksButtonConditionType,
-  QuicksButtonType,
-} from "@/interfaces/quicks-button-type";
+import FloatingQuicksChatDisplat from "../display/FloatingQuicksChatDisplay";
 import FloatingQuicksInboxDisplay from "../display/FloatingQuicksInboxDisplay";
 import FloatingQuicksTaskDisplay from "../display/FloatingQuicksTaskDisplay";
-import FloatingQuicksChatDisplat from "../display/FloatingQuicksChatDisplat";
+import FloatingQuicksButton from "./FloatingQuicksButton";
 
 type Props = {};
 

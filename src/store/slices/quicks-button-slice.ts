@@ -1,7 +1,4 @@
-import {
-  QuicksButtonConditionType,
-  QuicksButtonType,
-} from "@/interfaces/quicks-button-type";
+import { QuicksButtonConditionType } from "@/interfaces/quicks-button-type";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {

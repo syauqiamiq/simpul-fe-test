@@ -75,8 +75,10 @@ const FloatingQuicksChatDisplay = ({}: IFloatingQuicksChatDisplayProps) => {
         <div className="flex-grow overflow-auto">
           {isLoading || isFetching ? (
             <div className="p-5">
-              {[1, 2, 3].map(() => {
-                return <Skeleton className="mt-4" paragraph={{ rows: 3 }} />;
+              {[1, 2, 3].map((_, i: any) => {
+                return (
+                  <Skeleton key={i} className="mt-4" paragraph={{ rows: 3 }} />
+                );
               })}
             </div>
           ) : isSuccess ? (

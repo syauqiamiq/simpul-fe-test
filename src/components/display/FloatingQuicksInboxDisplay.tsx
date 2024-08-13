@@ -30,8 +30,8 @@ const FloatingQuicksInboxDisplay = (props: FloatingQuicksInboxDisplayProps) => {
 
       <div className="flex w-full flex-col gap-3 mt-2  overflow-auto">
         {isLoading || isFetching ? (
-          [1, 2, 3].map(() => {
-            return <Skeleton avatar paragraph={{ rows: 3 }} />;
+          [1, 2, 3].map((_, i: any) => {
+            return <Skeleton key={i} avatar paragraph={{ rows: 3 }} />;
           })
         ) : isSuccess ? (
           data?.map((v: IInboxData, i: any) => {
